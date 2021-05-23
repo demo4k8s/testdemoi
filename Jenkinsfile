@@ -28,4 +28,12 @@ pipeline{
         booleanParam(name: 'DOC1', defaultValue: false, description: '')
         text(name: 'doc1_patches', defaultValue: "", description: 'DOC1 Patches URLs.')
     }
+    stage('eCare') {
+                    when {
+                        expression { return params.SSP_eCare }
+                    }
+                    steps {
+                       echo "Right"
+                    }
+                }
 }
