@@ -17,7 +17,7 @@ pipeline {
                     stages {
                         stage('Stopping RBM Weblogic Process') {
                             when {
-                                expression { params.EnvironmentType == 'FIT1' && params.componentType == 'RBM_Weblogic' && params.OperationType == 'Stop' }
+                                expression { params.EnvironmentType == 'FIT1' && params.ComponentType == 'RBM_Weblogic' && params.OperationType == 'Stop' }
                             }
                             steps {
                                 sh 'ansible --version'
